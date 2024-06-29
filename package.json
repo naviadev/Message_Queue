@@ -4,7 +4,9 @@
   "description": "메세지 큐와 이벤트 브로커를 직접 구현해보며 학습하기 위한 레포지토리",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "express": "./server/dist/app.js",
+    "start-servers": "./startServer.sh"
   },
   "keywords": [],
   "author": "",
