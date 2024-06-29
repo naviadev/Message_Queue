@@ -13,4 +13,14 @@ class EventBroker {
   private queues: { [key: string]: MessageQueue } = {};
   private subscribers: { [key: string]: Subscriber[] } = {};
 
+
+
+  publish(eventType: string, message: string): void {
+    if (!this.queues[eventType]) {
+      this.queues[eventType] = new MessageQueue();
+    }
+    this.queues[eventType].enqueue(message);
+
+  }
+
 }
