@@ -1,0 +1,16 @@
+{
+  "name": "message_queue",
+  "version": "1.0.0",
+  "description": "메세지 큐와 이벤트 브로커를 직접 구현해보며 학습하기 위한 레포지토리",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2",
+    "typescript": "^5.5.2"
+  }
+}
