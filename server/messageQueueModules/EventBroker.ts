@@ -12,6 +12,7 @@ import { MessageQueue } from "./MessageQueue";
 export class EventBroker {
   private queues: { [key: string]: MessageQueue } = {};
   private subscribers: { [key: string]: Subscriber[] } = {};
+
   publish(eventType: string, message: string): void {
     if (!this.queues[eventType]) {
       this.queues[eventType] = new MessageQueue();
@@ -19,6 +20,7 @@ export class EventBroker {
     this.queues[eventType].enqueue(message);
     this.notifySubscribers(eventType);
   }
+  
   private notifySubscribers(eventType: string) {
     const queue = this.queues[eventType];
     // Queue가 존재하며, Queue가 비어있지 않다면 ? dequeue를 통해 가장 처음 들어온 요청을 가져온다.
